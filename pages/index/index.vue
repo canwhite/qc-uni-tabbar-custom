@@ -14,7 +14,7 @@
 			
 		</scroll-view>
 		
-		<view id="tabbar" class="cu-bar tabbar bg-white">
+		<view id="tabbar" class="cu-bar tabbar bg-white foot">
 			<view class="action tabbar-icon" 
 				:class="item.size=='big'?'big-icon':''" 
 				v-for="(item,index) in tabbar" 
@@ -217,5 +217,12 @@
 		 animation-timing-function: linear
 	 }
 	 
+	 .foot {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		z-index: 1024;
+		box-shadow: 0 -1upx 6upx rgba(0, 0, 0, 0.1);
+	}
 	 
 </style>
