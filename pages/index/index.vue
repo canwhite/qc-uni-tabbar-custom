@@ -14,7 +14,7 @@
 			
 		</scroll-view>
 		
-		<view id="tabbar" class="cu-bar tabbar bg-white foot">
+		<view id="tabbar" class="cu-bar tabbar bg-white foot shadow">
 			<view class="action tabbar-icon" 
 				:class="item.size=='big'?'big-icon':''" 
 				v-for="(item,index) in tabbar" 
@@ -129,100 +129,25 @@
 </script>
 
 <style lang="scss">
-	 
-	 @keyframes scale-up {
-		 0% {
-			 opacity: 0;
-			 transform: scale(.2)
-		 }
-	 
-		 100% {
-			 opacity: 1;
-			 transform: scale(1)
-		 }
-	 }
-	 
-	 @keyframes fade {
-		 0% {
-			 opacity: 0
-		 }
-	 
-		 100% {
-			 opacity: 1
-		 }
-	 }
-	 
-	 .cu-bar {
-		display: flex;
-		position: relative;
-		align-items: center;
-		min-height: 100upx;
-		justify-content: space-between;
-	 }
-	 
-	 .tabbar {
-		padding: 0;
-		height: calc(100upx + env(safe-area-inset-bottom) / 2);
-		padding-bottom: calc(env(safe-area-inset-bottom) / 2);
-	 }
-	 
-	 .bg-white {
-		background-color: #ffffff;
-		color: #666666;
-	 }
-	 
-	 .tabbar-icon{
-		 image{
-			 width: 60upx;
-			 height: 60upx;
-		 }
-	 }
-	 
-	 .action {
-		font-size: 22upx;
-		position: relative;
-		flex: 1;
-		text-align: center;
-		padding: 0;
-		display: block;
-		height: auto;
-		line-height: 1;
-		margin: 0;
-		background-color: inherit;
-		overflow: initial;
-	 }
-	 
-	 .tabbar-icon.big-icon{
-		 position: relative;
-		 bottom: 20upx;
-		 image{
-			 width: 100upx;
-			 height: 100upx;
-		 }
-	 }
-	 
-	 .app-container {
-		 min-height: 600upx;
-		 background-color: #FFFFFF;
-	 }
-	 
-	 
-	 .animation-scale-up {
-		 animation-name: scale-up
-	 }
-	 
-	 .animation-fade {
-		 animation-name: fade;
-		 animation-duration: .1s;
-		 animation-timing-function: linear
-	 }
-	 
-	 .foot {
-		position: fixed;
-		width: 100%;
-		bottom: 0;
-		z-index: 1024;
-		box-shadow: 0 -1upx 6upx rgba(0, 0, 0, 0.1);
+	.app-container {
+		min-height: 600upx;
+		background-color: #FFFFFF;
 	}
-	 
+	.tabbar-icon{
+		image{
+			width: 60upx;
+			height: 60upx;
+			
+		}
+	}
+	.tabbar-icon.big-icon{
+		position: relative;
+		bottom: 20upx;
+		image{
+			width: 100upx;
+			height: 100upx;
+		}
+	}
+
+
 </style>

@@ -15,12 +15,13 @@ Vue.use(config);//全局可 通过 this.$config 访问 配置
 import cuPageIndex from "@/pages/common-pages/index.vue";
 import cuPageGoods from "@/pages/common-pages/goods.vue";
 import cuPageMine from "@/pages/common-pages/mine.vue";
+import cuCustom from './colorui/components/cu-custom.vue'
 
 Vue.component('cu-page-index',cuPageIndex)
 Vue.component('cu-page-goods',cuPageGoods)
 Vue.component('cu-page-mine',cuPageMine)
 
-
+Vue.component('cu-custom',cuCustom)
 Vue.config.productionTip = false
 App.mpType = 'app'
 

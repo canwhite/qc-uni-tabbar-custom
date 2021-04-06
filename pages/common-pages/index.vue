@@ -1,16 +1,35 @@
 <template>
+	
 	<view style="height: 100%;">
-		<view> index  </view>
+
+		<!--这些componets是通过css引入colorUI的样式，这里只是展示
+			自己选择好样式之后css引入就可以了
+		-->
+		<!--:isBack="true" -->
+		<cu-custom bgColor="bg-gradual-blue" >
+<!-- 			<block slot="backText">返回</block> -->
+			<block slot="content">首页</block>
+<!-- 			<block slot="right">
+				<view class="action">
+					<view class="cu-load load-cuIcon" :class="!isLoad?'loading':'over'"></view>
+				</view> 
+			</block> -->
+		</cu-custom>
+		
+		<view> 
+			<loading></loading> 
+		</view>
 		
 		
 	</view>
 </template>
 
 <script>
-
+	import loading from "@/components/loading.vue"
 	export default {
 
 		components:{
+			loading
 		},
 		data() {
 			return {
@@ -21,7 +40,7 @@
 
 		},
 		created() {
-			console.log("created")
+			
 		 
 		}
 	}
