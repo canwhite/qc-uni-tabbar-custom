@@ -25,7 +25,7 @@
 </template>
 
 <script>
-	import loading from "@/components/loading.vue"
+	import loading from "@/des/loading.vue"
 	export default {
 
 		components:{
